@@ -1,0 +1,129 @@
+
+.field-name-field-swatches{
+	
+	.field-items{
+		.field-item{
+			width: 20%;
+			float: left;
+			position: relative;
+			margin-bottom: 0;
+	
+		}
+	}
+	
+	
+		
+	.field{
+			
+		.field-item{
+			width: 100%;
+			float: none;
+			text-align: center;
+			position: relative;
+					}
+	}
+	
+	
+}
+
+.field-collection-view{
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	border-bottom: none;
+	text-align: center;
+	
+	.entity-field-collection-item{
+		width: auto;
+		float: none;
+	}
+
+	
+	.field-label{
+		width: auto;
+		font-weight: normal;
+		color: $grey;
+	}
+	
+	.field-item{
+		color: $grey;
+		font-weight: bold;
+		
+	}
+	
+	ul.field-collection-view-links{
+		display: inline;
+		margin-top: 10px;
+		float: none;
+		margin: 0 auto;
+		
+		li{ 
+			display: inline-block;
+			position: relative;
+			right: auto;
+			top: auto;
+			box-shadow: none;
+			
+			
+			
+			border: none;
+			padding: 0;
+			margin-left: 2px;
+			
+			a{
+				font-size: 0;
+				@extend .icon;
+				@extend .button;
+			}
+			
+		}
+		
+		li.edit a{ @extend .icon-mode_edit; }
+		li.delete a{ @extend .icon-close; }
+		
+	}
+}
+
+.field-collection-container{
+	border-bottom: none;
+	position: relative;
+	
+	
+	ul.action-links{
+		
+		
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		
+		list-style-type: none;
+		margin: 0;
+		
+		a{
+			font-size: 0;
+			@extend .icon;
+			@extend .button;
+			@extend .icon-add
+		}
+	}
+
+	
+}
+
+
+.field-name-field-color-name{
+	
+	
+	.field-item{
+		color: #000;
+		padding: 0.5em 0;
+		
+	}
+}
+
+.colorfield-color-swatch{
+	border-radius: 64px;
+	border: 1px solid $grey;
+	margin: 0 auto;
+	
+}

@@ -1,0 +1,333 @@
+#content-area{
+	position: relative;
+}
+
+.tabledrag-toggle-weight-wrapper{
+	display: none;
+}
+
+.draggable a.tabledrag-handle{
+	position: absolute;
+	top: 28px;
+	right: -20px;
+	height: auto;
+    margin-left: 0;
+    overflow: visible;
+			
+	&:hover{ color: $hover_color;}
+	
+	.handle{
+		content: "";
+		font-size: 0;
+		background: none;
+		
+		@extend .icon;
+		@extend .button;
+		@extend .icon-unfold_more;
+				
+	}
+}
+
+.views-table tbody{
+	border-top: none;
+}
+
+body.drag{
+	tr.draggable{
+		opacity: 0.5;
+		
+		.contextual-links-wrapper{
+			display: none;
+		}
+		.tabledrag-handle{
+			display: none;
+		}
+		
+		.content{
+			display: none;
+		}
+	}
+	
+	
+}
+
+
+tr.draggable{
+	
+	&.even, &.odd {
+		 background-color: transparent;
+	}
+ 
+	
+	td{
+		position: relative;
+		padding: 2em 0;
+		
+		border-top: 1px solid #d6d6d6;
+		
+		body.logged-in &{  }
+	}
+	
+	&.drag{
+		opacity: 1 !important;
+		color: $edit_hover;
+		
+		.tabledrag-handle{
+			display: block !important;
+		}
+		
+		
+	}
+	
+	.contextual-links-region-active,
+	.contextual-links-trigger-active{
+		border: none !important;
+	}
+	
+	.contextual-links-wrapper{
+
+		display: block;
+		right: -47px;
+		top: 21px;
+		
+		
+		.contextual-links-trigger{
+			display: none;
+		}
+		
+		ul.contextual-links{
+			display: block;	
+			border: none;
+			background-color: transparent;
+		}
+		
+		li{
+			margin-bottom: 2px;
+			a{
+				font-size: 0;	
+				@extend .icon;
+				@extend .button;
+								
+				
+			}
+		}
+		
+		li.node-edit a{	@extend .icon-mode_edit; }
+		li.node-delete a{	@extend .icon-close; }
+		li.manage-display a{	@extend .icon-apps; }
+	}
+	
+	
+}
+
+
+div.tabs{
+	
+		display: block;
+		position: absolute;
+		right: -40px;
+		top: -50px;
+		
+		
+		ul.tabs.primary{
+			display: block;	
+			border: none;
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+			
+			li{
+				display: block;	
+				margin-bottom: 2px;
+				
+				a{
+					display: inline-block;	
+					font-size: 0;	
+					@extend .icon;
+					@extend .button;
+									
+					border: none !important;
+				}
+				
+				a.view{	display: none; }
+				a.edit{	@extend .icon-mode_edit; }
+				a.manage-display{	@extend .icon-apps; }
+			}
+		}
+		
+		
+		
+		
+	}
+
+
+
+.field-name-field-attachment{
+		
+	.field-label{
+		text-transform: uppercase;
+		font-size: 11px;
+		
+		color: $grey;
+		margin-bottom: 1em;
+	}
+	
+	.field-item{
+				margin-bottom: 2px;
+		
+	}
+	
+	.file{
+		
+		
+		
+		img{
+			display: none;
+			
+		}
+		
+		a{
+			background-color: $grey_subtle;
+			padding: 2px 2px 6px 2px;
+			font-size: 12px;
+	
+			line-height: 1em;
+			white-space: nowrap;
+			overflow: hidden;
+			display: inline-block;
+			width: 100%;
+			text-overflow: ellipsis;
+			
+			&:hover{
+				background-color: $hover_color;
+				color: #fff;
+			}
+		}
+		
+		a:before{
+			@extend .icon;
+			@extend .icon-play_for_work;
+			
+			font-size: 18px;	
+		}
+	}
+}
+
+
+p img{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	
+	max-width: 100%;
+	height: auto;
+}
+
+
+.links{
+	text-align: right;
+
+}
+
+.node-readmore{
+	padding: 0 !important;
+		
+	a{
+		padding: 0.4em 1em;
+		display: inline-block;
+		background: $link_color;
+		border-radius: 1px;
+		color: #fff;
+		font-size: 14px;
+		
+		&:hover{
+			background-color: $hover_color;
+		}
+		
+	}
+}
+
+
+.group-center{
+	@include span-columns(8 of 11);
+}
+
+.group-right{
+	@include span-columns(3 of 11);
+}
+
+
+.add_controls{
+	list-style-type: none;
+	
+	position: absolute;
+	bottom: 0px; 
+	right: -40px;
+
+	
+	
+	i{  @extend .icon; }
+	
+	li{
+		display: inline-block;
+		&:hover a{
+			color: $hover_color;
+		}
+		&:hover li a{
+			color: $link_color;
+		}
+		&:hover li a:hover{
+			color: #fff;
+		}
+	}
+	
+	li a {
+		display: inline-block;
+		
+		
+		i{  @extend .icon;
+			@extend .button;
+		}
+			
+		
+		
+	}
+	
+	
+	#add_anchor i{ @extend .icon-add; }
+	#add_text i{ @extend .icon-subject; }
+	#add_color i{ @extend .icon-format_paint; }
+	#add_code i{ @extend .icon-code; }
+
+	
+}
+
+
+
+.view-asset-file-list{
+	
+	.view-content{
+		
+	}
+	.views-row{
+		@include span-columns(4);
+		padding: 10px;
+		background-color: $grey_subtle;
+		border-radius: 1px;
+	}
+}
+
+
+.field-name-field-images{
+	
+	
+}
+
+.field-name-field-note{
+	border-top: 2px solid $grey_light;
+	padding-top: 0.5em;
+	font-size: 18px;
+	line-height: 1.4em;
+	
+	color: $grey_light;
+}
